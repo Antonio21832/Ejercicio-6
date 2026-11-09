@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Ejercicio6Interfaces" default="run" basedir=".">
+    <property file="nbproject/project.properties"/>
+    <target name="init"><mkdir dir="build/classes"/></target>
+    <target name="compile" depends="init"><javac srcdir="src" destdir="build/classes" includeantruntime="false" encoding="UTF-8" source="8" target="8"/></target>
+    <target name="run" depends="compile"><java classname="principal.Main" fork="true" failonerror="true"><classpath path="build/classes"/></java></target>
+    <target name="clean"><delete dir="build"/></target>
+    <target name="jar" depends="compile"><mkdir dir="dist"/><jar destfile="dist/Ejercicio6Interfaces.jar" basedir="build/classes"><manifest><attribute name="Main-Class" value="principal.Main"/></manifest></jar></target>
+</project>
